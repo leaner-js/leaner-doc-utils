@@ -1,0 +1,39 @@
+{
+  "name": "leaner-doc-utils",
+  "version": "1.0.0",
+  "description": "Vite plugins for generating static HTML documentation",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "main": "./index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaner-js/leaner-doc-utils.git"
+  },
+  "keywords": [
+    "leaner",
+    "documentation",
+    "generator"
+  ],
+  "author": "Michał Męciński",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leaner-js/leaner-doc-utils/issues"
+  },
+  "homepage": "https://github.com/leaner-js/leaner-doc-utils",
+  "dependencies": {
+    "@shikijs/markdown-it": "^3.3.0",
+    "glob": "^11.0.2",
+    "handlebars": "^4.7.8",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0",
+    "mrmime": "^2.0.1",
+    "vite": "^6.3.5"
+  }
+}
