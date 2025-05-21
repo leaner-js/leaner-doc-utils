@@ -1,6 +1,6 @@
 {
   "name": "leaner-doc-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vite plugins for generating static HTML documentation",
   "type": "module",
   "engines": {
