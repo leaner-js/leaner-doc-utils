@@ -27,7 +27,7 @@ export function escapeHtml( text ) {
 }
 
 async function createMarkdown() {
-  const md = markdownit();
+  const md = markdownit( { typographer: true } );
 
   md.use( container, 'frontmatter', {
     marker: '-',
