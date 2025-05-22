@@ -75,23 +75,25 @@ export function buildDocs( docConfig ) {
   }
 
   async function handleFileChange( file ) {
+    await delay( 100 );
+
     if ( template == null )
       return;
 
     try {
-      await delay( 100 );
       const stats = await stat( join( docsDir, file ) );
       if ( stats.isFile() ) {
         const inputFile = file.replaceAll( '\\', '/' );
         const outputFile = inputFile.replace( /.md$/, '.html' );
         console.log( outputFile );
         await generateFile( inputFile, docsDir, distDir, template, docConfig, files );
-        queued.delete( file );
         server.reload( outputFile );
       }
     } catch ( err ) {
       if ( err.code != 'ENOENT' )
         console.error( err );
+    } finally {
+      queued.delete( file );
     }
   }
 
