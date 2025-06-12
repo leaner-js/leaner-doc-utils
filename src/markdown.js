@@ -86,7 +86,7 @@ function renderLink( tokens, idx, options, env, self ) {
     tokens[ idx ].attrSet( 'href', parts.join( '#' ) );
     if ( env.links != null )
       env.links.push( parts[ 0 ] );
-  } else {
+  } else if ( !href.startsWith( "#" ) ) {
     tokens[ idx ].attrSet( 'target', '_blank' );
     tokens[ idx ].attrSet( 'rel', 'noopener noreferrer' );
   }
