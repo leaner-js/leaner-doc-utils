@@ -65,7 +65,7 @@ The `inlineScript()` Vite plugin makes it possible to inline JavaScript files in
 <script src="./src/inline.js" type="inline"></script>
 ```
 
-The script is minified with esbuild and wrapped in IIFE:
+The script is minified with oxc and wrapped in IIFE:
 
 ```html
 <script>(()=>{...})();</script>
@@ -125,4 +125,4 @@ A TOC is automatically generated from `H2` headings and inserted into the sideba
 
 ## License
 
-The leaner-doc-utils package is open-source software released under the MIT License. &copy; 2025 Michał Męciński.
+The leaner-doc-utils package is open-source software released under the MIT License. &copy; 2026 Michał Męciński.
