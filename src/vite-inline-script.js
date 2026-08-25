@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
 
-import { transformWithEsbuild } from 'vite';
+import { transformWithOxc } from 'vite';
 
 const scriptRegExp = /<script([^>]*)>/gi;
 const typeRegExp = /\btype\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s'">]+))/i;
@@ -37,7 +37,7 @@ export function inlineScript() {
 
             if ( src != null ) {
               const content = await readFile( resolve( rootDir, src ), 'utf-8' );
-              const minified = await transformWithEsbuild( content, src, { format: 'iife', minify: true } );
+              const minified = await transformWithOxc( content, src, { format: 'iife', minify: true } );
 
               if ( match.index != prevPos )
                 result.push( source.slice( prevPos, match.index ) );

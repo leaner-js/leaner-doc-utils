@@ -2,7 +2,7 @@ import { extname } from 'path';
 import { join } from 'path/posix';
 
 import Shiki from '@shikijs/markdown-it'
-import yaml from 'js-yaml';
+import { load } from 'js-yaml';
 import markdownit from 'markdown-it';
 
 import container from './markdown-container.js';
@@ -35,7 +35,7 @@ async function createMarkdown() {
       return true;
     },
     callback( content ) {
-      currentEnv.frontmatter = yaml.load( content );
+      currentEnv.frontmatter = load( content );
     },
   } );
 
